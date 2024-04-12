@@ -122,7 +122,7 @@ always @(posedge clk)
 
   //-- Descomponer la instruccion en los campos CO y CD
    wire [2:0] CO = ri[11:9];  //-- Codigo de operacion
-   wire [8:0] CD = ri[11:0];   //-- Campo de direccion
+   wire [8:0] CD = ri[8:0];   //-- Campo de direccion
    wire [3:0] COE = ri[11:8]; //-- Código de operacion extendido
 
   always @(posedge clk)
