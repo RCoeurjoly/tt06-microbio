@@ -2,7 +2,7 @@
 project:
   title:        "tt6-simplez"      # Project title
   author:       "Roland Coeurjoly"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  discord:      "vegan_anticucho"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Simplez"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     12000000       # Clock frequency in Hz (or 0 if not applicable)
