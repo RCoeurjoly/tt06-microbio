@@ -15,7 +15,7 @@ project:
 
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
-    - "simplez-top.v"
+    - "project.v"
     - "baudgen_rx.v"
     - "baudgen_tx.v"
     - "baudgen.vh"
