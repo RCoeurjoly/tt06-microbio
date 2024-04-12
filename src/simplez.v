@@ -65,7 +65,7 @@ assign ram_inst_cs = (state == INIT) ? 1 : 0;
 assign ram_cs = ram_inst_cs | ram_data_cs;
 
 genram #(
-        .ROMFILE(ROMFILE),
+//        .ROMFILE(ROMFILE),
         .AW(AW),
         .DW(DW))
   ROM (
