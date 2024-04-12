@@ -29,7 +29,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "RX Serial Input from Keyboard"  # ui_in[0] used for RX
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -39,18 +39,18 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "LED 0"  # First LED
+  uo[1]: "LED 1"  # Second LED
+  uo[2]: "LED 2"  # Third LED
+  uo[3]: "LED 3"  # Fourth LED
+  uo[4]: "LED 4"  # Fifth LED
+  uo[5]: "LED 5"  # Sixth LED
+  uo[6]: "LED 6"  # Seventh LED
+  uo[7]: "LED 7"  # Eighth LED
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "Stop Signal Indicator"  # Used for the stop signal
+  uio[1]: "TX Serial Output to Display"  # Used for TX
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
