@@ -13,8 +13,8 @@
 //----------------------------------------------------------------------------
 
 module genram #(             //-- Parametros
-         parameter AW = 8,   //-- Bits de las direcciones (Adress width)
-         parameter DW = 11)   //-- Bits de los datos (Data witdh)
+         parameter AW = 1,   //-- Bits de las direcciones (Adress width)
+         parameter DW = 4)   //-- Bits de los datos (Data witdh)
 
        (        //-- Puertos
          input clk,                      //-- Señal de reloj global
