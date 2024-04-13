@@ -48,7 +48,7 @@ localparam HALTE = 4'hE; //-- Halt extended
 localparam WAIT = 4'hF;  //-- Wait
 
 //-- Tamano de la memoria RAM a instanciar
-localparam AW = 3;     //-- Anchura del bus de direcciones
+localparam AW = 4;     //-- Anchura del bus de direcciones
 localparam DW = 12;     //-- Anchura del bus de datos
 
 //-- Instanciar la memoria RAM
