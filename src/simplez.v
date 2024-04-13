@@ -26,11 +26,18 @@ module simplez  #(
 
 
 //-- Direcciones para los perifericos
-localparam LEDS_ADR = 9'd507;
-localparam PANTALLA_STATUS_ADR = 9'd508;  //-- Pantalla: Unidad de transmision serie
-localparam PANTALLA_DATA_ADR = 9'd509;
-localparam TECLADO_STATUS_ADR = 9'd510;   //-- Teclado: Unidad de recepcion serie
-localparam TECLADO_DATA_ADR = 9'd511;
+   // Define constants with 4 bits
+   localparam [3:0] LEDS_ADR = 4'h1;  // Example value, adjust as needed
+   localparam [3:0] PANTALLA_DATA_ADR = 4'h2;
+   localparam [3:0] TECLADO_DATA_ADR = 4'h3;
+   localparam [3:0] TECLADO_STATUS_ADR = 4'h4;
+   localparam [3:0] PANTALLA_STATUS_ADR = 4'h5;
+
+// localparam LEDS_ADR = 9'd507;
+// localparam PANTALLA_STATUS_ADR = 9'd508;  //-- Pantalla: Unidad de transmision serie
+// localparam PANTALLA_DATA_ADR = 9'd509;
+// localparam TECLADO_STATUS_ADR = 9'd510;   //-- Teclado: Unidad de recepcion serie
+// localparam TECLADO_DATA_ADR = 9'd511;
 
 
 //-- Codigos de operacion de las instrucciones de simplez
@@ -246,7 +253,7 @@ wire leds_cs = (CD == LEDS_ADR) ? 1 : 0;
 //-- Logica de activacion del chip select de la memoria
 //-- Direcciones desde 0 - 1F7  son de RAM
 //-- Desde 1F8 a 1FF son para perifericos
-assign ram_data_cs = (CD < 9'h1F8) ? 1 : 0;
+   assign ram_data_cs = ({5'b00000, CD} < 9'h1F8) ? 1 : 0;
 assign pant_data_cs = (CD == PANTALLA_DATA_ADR) ? 1 : 0;
 assign pant_status_cs = (CD == PANTALLA_STATUS_ADR) ? 1 : 0;
 assign tecl_data_cs = (CD == TECLADO_DATA_ADR) ? 1 : 0;
