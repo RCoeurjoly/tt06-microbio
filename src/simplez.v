@@ -48,7 +48,7 @@ localparam HALTE = 4'hE; //-- Halt extended
 localparam WAIT = 4'hF;  //-- Wait
 
 //-- Tamano de la memoria RAM a instanciar
-localparam AW = 2;     //-- Anchura del bus de direcciones
+localparam AW = 3;     //-- Anchura del bus de direcciones
 localparam DW = 12;     //-- Anchura del bus de datos
 
 //-- Instanciar la memoria RAM
@@ -122,7 +122,7 @@ always @(posedge clk)
 
   //-- Descomponer la instruccion en los campos CO y CD
    wire [2:0] CO = ri[11:9];  //-- Codigo de operacion
-   wire [1:0] CD = ri[1:0];   //-- Campo de direccion
+   wire [AW-1:0] CD = ri[AW-1:0];   //-- Campo de direccion
    wire [3:0] COE = ri[11:8]; //-- Código de operacion extendido
 
   always @(posedge clk)
